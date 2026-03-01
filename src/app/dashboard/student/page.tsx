@@ -31,11 +31,19 @@ export default function StudentDashboard() {
 
   useEffect(() => {
     // Fetch user data
-    fetch("/api/auth/register")
+    fetch("/api/auth/status")
       .then(res => res.json())
       .then(data => {
-        if (data.authenticated) {
+        if (data.authenticated && data.user) {
           setUser(data.user);
+        } else {
+          // Demo mode - show sample data
+          setUser({
+            firstName: "Alex",
+            lastName: "Student",
+            role: "student",
+            subscriptionTier: "basic"
+          });
         }
       })
       .catch(() => {
