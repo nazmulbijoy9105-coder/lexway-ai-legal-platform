@@ -508,7 +508,7 @@ export default function HomePage() {
               Choose Your Plan
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Start free, upgrade when you're ready. All plans include core curriculum access.
+              Start free, upgrade when you&apos;re ready. All plans include core curriculum access.
             </p>
           </div>
           

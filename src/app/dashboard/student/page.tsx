@@ -138,7 +138,7 @@ export default function StudentDashboard() {
               
               <div className="flex items-center space-x-2">
                 <div className="w-9 h-9 bg-gradient-to-br from-primary-500 to-legal-500 rounded-full flex items-center justify-center text-white font-medium">
-                  {user?.firstName?.[0] || "A"}S
+                  {user?.firstName ? `${user.firstName[0]}${user.lastName?.[0] || 'S'}` : "AS"}
                 </div>
                 <div className="hidden md:block">
                   <div className="text-sm font-medium">{user?.firstName || "Alex"} {user?.lastName || "Student"}</div>

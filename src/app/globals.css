@@ -209,20 +209,39 @@ input:focus, textarea:focus, select:focus {
 
 /* Button base styles */
 .btn-primary {
-  @apply px-6 py-3 bg-gradient-to-r from-primary-500 to-legal-500 text-white font-semibold rounded-xl 
-         hover:shadow-lg hover:shadow-legal-500/25 transition-all duration-300;
+  @apply px-6 py-3 font-semibold rounded-xl transition-all duration-300;
+  background: linear-gradient(to right, var(--color-primary-500), var(--color-legal-500));
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.25);
 }
 
 .btn-secondary {
-  @apply px-6 py-3 bg-white text-slate-700 font-semibold rounded-xl border-2 border-slate-200
-         hover:border-primary-500 hover:text-primary-500 transition-all duration-300;
+  @apply px-6 py-3 font-semibold rounded-xl transition-all duration-300;
+  background: white;
+  color: var(--color-slate-700);
+  border: 2px solid var(--color-slate-200);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-primary-500);
+  color: var(--color-primary-500);
 }
 
 /* Card styles */
 .card {
-  @apply bg-white rounded-2xl shadow-sm border border-slate-100;
+  @apply rounded-xl border;
+  background: white;
+  border-color: var(--color-slate-100);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .card-elevated {
-  @apply bg-white rounded-2xl shadow-lg border border-slate-100;
+  @apply rounded-xl border;
+  background: white;
+  border-color: var(--color-slate-100);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }

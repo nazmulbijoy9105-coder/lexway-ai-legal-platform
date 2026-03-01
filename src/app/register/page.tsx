@@ -96,7 +96,7 @@ function RegisterForm() {
 
           {plan && (
             <div className="bg-primary-50 border border-primary-200 text-primary-700 px-4 py-3 rounded-xl mb-6">
-              You're signing up for the <strong>{plan === 'basic' ? 'Basic' : 'Premium'}</strong> plan
+              You&apos;re signing up for the <strong>{plan === 'basic' ? 'Basic' : 'Premium'}</strong> plan
             </div>
           )}
 
